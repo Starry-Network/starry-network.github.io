@@ -1,16 +1,15 @@
-import { Center, Heading, Text, Flex, Stack, Icon,   useColorModeValue as mode,
+import { Center, Heading, Text, Flex, Stack, Icon,   useColorModeValue,
 } from "@chakra-ui/react";
 import { SiParitysubstrate } from "react-icons/si";
 
 const More = () => (
   <Flex
-    bg="teal.300"
     w="full"
     minH="200px"
     alignItems="center"
     justifyContent="center"
     py="20"
-    bg={mode("teal.300", "gray.800")}
+    bg={useColorModeValue("teal.300", "gray.800")}
   >
     <Stack spacing="6">
       <Center>

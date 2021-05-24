@@ -12,7 +12,6 @@ import {
   Icon,
   Spacer,
   useColorMode,
-  VisuallyHidden,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { FaMoon, FaSun, FaGithub } from "react-icons/fa";
@@ -117,7 +116,6 @@ const MobileNavItem = ({ label, children, href }) => {
 };
 
 const DesktopNavItem = ({ href, icon, color }) => {
-  const navTextColor = useColorModeValue("gray.900", "white");
   return (
     <Link href={href} p="2" mr="2" fontSize="lg" color={color}>
       <Icon fill={color} as={icon} />
