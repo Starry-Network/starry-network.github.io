@@ -6,6 +6,7 @@ import {
   Stack,
   Collapse,
   Link,
+  Image,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
@@ -15,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { FaMoon, FaSun, FaGithub } from "react-icons/fa";
-
+import Logo from './logo.png'
 // from simple-icons
 const SubstackIcon = (props) => (
   <Icon viewBox="0 0 200 200" {...props}>
@@ -165,7 +166,8 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            Starry
+            {/* Starry */}
+            <Image src={Logo} height="35px" />
           </Link>
         </Flex>
         <Spacer />
