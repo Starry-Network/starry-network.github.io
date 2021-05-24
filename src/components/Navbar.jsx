@@ -16,7 +16,8 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { FaMoon, FaSun, FaGithub } from "react-icons/fa";
-import Logo from './logo.png'
+import darkLogo from './darkLogo.png'
+import lightLogo from './lightLogo.png'
 // from simple-icons
 const SubstackIcon = (props) => (
   <Icon viewBox="0 0 200 200" {...props}>
@@ -126,6 +127,7 @@ const DesktopNavItem = ({ href, icon, color }) => {
 function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const navTextColor = useColorModeValue("gray.900", "white");
+  const logo = useColorModeValue(lightLogo, darkLogo);
   const { toggleColorMode } = useColorMode();
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
@@ -167,7 +169,7 @@ function Navbar() {
             }}
           >
             {/* Starry */}
-            <Image src={Logo} height="35px" />
+            <Image src={logo} height="35px" />
           </Link>
         </Flex>
         <Spacer />
